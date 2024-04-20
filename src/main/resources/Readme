@@ -1,0 +1,11 @@
+To start active MQ server :
+Step 1 : Go to bin folder of active mq folder and open cmd
+Step 2 : Execute - ActiveMQ start , server will be started.
+
+To visit active mq admin console :
+http://localhost:8161/admin
+username - admin
+password - admin
+
+To access active mq from java app :
+url - tcp://localhost:61616
