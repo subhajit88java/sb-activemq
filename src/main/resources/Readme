@@ -9,3 +9,16 @@ password - admin
 
 To access active mq from java app :
 url - tcp://localhost:61616
+------------------------------------------------------------
+Flows :
+1. Queue pub-sub : PUSH mechanism || Message is pushed to the subscribers one at a time through listeners.
+eg : message1 will be pushed to subscriber 1, message1 will not be pushed to other subscriber.
+message 2 will be pushed to subscriber2
+2. Topic pub-sub :  PUSH mechanism || Message is pushed to all subscribers all at once.
+eg : message1 will be pushed to subscriber 1 and subscriber 2 at the same time
+3. Queue peer to peer : PULL mechanism || Message will be available to the consumers if and only if they call the receive mechanism on FCFS basis.
+eg : If consumer 1 receives message1, the same message will not be available to other consumers
+4. Topic peer to peer : PULL mechanism || Message will be available to the consumers if and only if they call the receive mechanism.
+Same message will be available to other consumers as well.
+eg : If consumer 1 receives message1, the same message will be available to other consumers as well
+------------------------------------------------------------
