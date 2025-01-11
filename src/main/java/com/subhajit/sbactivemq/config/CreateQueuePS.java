@@ -26,7 +26,7 @@ public class CreateQueuePS {
         // The name of the queue.
         this.queueName = queueName;
         // URL of the JMS server is required to create connection factory.
-        // DEFAULT_BROKER_URL is : tcp://localhost:61616 and is indicates that JMS
+        // DEFAULT_BROKER_URL is : tcp://localhost:61616 and it indicates that JMS
         // server is running on localhost
         connectionFactory = new ActiveMQConnectionFactory(ActiveMQConnectionFactory.DEFAULT_BROKER_BIND_URL);
         // Getting JMS connection from the server and starting it

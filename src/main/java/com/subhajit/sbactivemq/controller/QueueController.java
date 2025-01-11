@@ -62,7 +62,7 @@ public class QueueController {
     public String closePpConnection(){
         try {
              createQueuePP.close();
-            return "Queue closd!";
+            return "Queue closed!";
         }catch(Exception e){
             e.printStackTrace();
             return "Queue close failed!";

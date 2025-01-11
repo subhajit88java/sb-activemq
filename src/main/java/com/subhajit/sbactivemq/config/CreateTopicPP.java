@@ -12,7 +12,7 @@ import static org.apache.activemq.ActiveMQSession.INDIVIDUAL_ACKNOWLEDGE;
 public class CreateTopicPP {
 
     private static final String CLIENTID = "subhajit-3";
-    private String queueName;
+    private String topicName;
     private ConnectionFactory connectionFactory;
     private Connection connection;
     private Session session;
@@ -20,9 +20,9 @@ public class CreateTopicPP {
     private MessageProducer producer;
     private MessageConsumer consumer;
 
-    public void createTopicPP(String queueName) throws Exception {
+    public void createTopicPP(String topicName) throws Exception {
         // The name of the queue.
-        this.queueName = queueName;
+        this.topicName = topicName;
         // URL of the JMS server is required to create connection factory.
         // DEFAULT_BROKER_URL is : tcp://localhost:61616 and is indicates that JMS
         // server is running on localhost
@@ -37,7 +37,7 @@ public class CreateTopicPP {
         // server.
         // The queue will be created automatically on the JSM server if its not already
         // created.
-        destination = session.createTopic(this.queueName);
+        destination = session.createTopic(this.topicName);
         // MessageProducer is used for sending (producing) messages to the queue.
         producer = session.createProducer(destination);
         // MessageConsumer is used for receiving (consuming) messages from the queue.

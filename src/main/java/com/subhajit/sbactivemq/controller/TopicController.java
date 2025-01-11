@@ -16,9 +16,9 @@ public class TopicController {
     private CreateTopicPS createTopicPS;
 
     @GetMapping("/create-pp-topic")
-    public String createPPTopic(String queueName){
+    public String createPPTopic(String topicName){
         try {
-            createTopicPP.createTopicPP(queueName);
+            createTopicPP.createTopicPP(topicName);
             return "TOPIC CREATED!!";
         }catch(Exception e){
             e.printStackTrace();
